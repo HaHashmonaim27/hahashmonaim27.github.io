@@ -78,29 +78,59 @@
 					<h1><span class="colored">התחדשות</span> עירונית</h1>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-md-12 animate-box">
+					<h1><span class="colored">יזם</span> הפרוייקט</h1>
+				</div>
+			</div>
+			<div id="pdfViewerDev">
+			  <script>
+			    // Initialize PDF.js
+			    PDFJS.getDocument({ url: 'Dev.pdf' })
+			    .then(pdf => {
+			      // Render the PDF
+			      pdf.getPage(1).then(page => {
+				const viewport = page.getViewport({ scale: 1.0 });
+				const canvas = document.createElement('canvas');
+				const context = canvas.getContext('2d');
+				canvas.height = viewport.height;
+				canvas.width = viewport.width;
+				document.getElementById('pdfViewer').appendChild(canvas);
+				page.render({ canvasContext: context, viewport: viewport });
+			      });
+			    });
+			  </script>
+			</div>
+			<div class="row">
+				<div class="col-md-12 animate-box">
+					<h1><span class="colored">עו״ד</span> מלווה</h1>
+				</div>
+			</div>
+			<div id="pdfViewerDev">
+			  <script>
+			    // Initialize PDF.js
+			    PDFJS.getDocument({ url: 'Law.pdf' })
+			    .then(pdf => {
+			      // Render the PDF
+			      pdf.getPage(1).then(page => {
+				const viewport = page.getViewport({ scale: 1.0 });
+				const canvas = document.createElement('canvas');
+				const context = canvas.getContext('2d');
+				canvas.height = viewport.height;
+				canvas.width = viewport.width;
+				document.getElementById('pdfViewer').appendChild(canvas);
+				page.render({ canvasContext: context, viewport: viewport });
+			      });
+			    });
+			  </script>
+			</div>
+
 		</div>
 	</div>
+	
 	<div id="best-deal">
 		<div class="container">
 			<div class="row">
-				<div id="pdfViewer">
-  <script>
-    // Initialize PDF.js
-    PDFJS.getDocument({ url: 'Dev.pdf' })
-    .then(pdf => {
-      // Render the PDF
-      pdf.getPage(1).then(page => {
-        const viewport = page.getViewport({ scale: 1.0 });
-        const canvas = document.createElement('canvas');
-        const context = canvas.getContext('2d');
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
-        document.getElementById('pdfViewer').appendChild(canvas);
-        page.render({ canvasContext: context, viewport: viewport });
-      });
-    });
-  </script>
-				</div>
 				<div class="col-md-4 item-block animate-box" data-animate-effect="fadeIn">
 					<div class="fh5co-property">
 						<figure>
@@ -108,11 +138,16 @@
 							<a href="#" class="tag">For Sale</a>
 						</figure>
 						<div class="fh5co-property-innter">
-							<h3><a href="#">Villa In Hialeah, Dade County</a></h3>
+							<h3><a href="#">מידע כללי</a></h3>
 							<div class="price-status">
-		                 	<span class="price">$540,000 </span>
+		                 	<span class="price">מהי התחדשות עירונית? </span>
 		               </div>
-		               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque dicta magni amet atque doloremque velit unde adipisci omnis hic quaerat.</p>
+		               <p>פרויקטים של התחדשות עירונית באים לחדש מרקמי מגורים ותיקים ובכלל זה לשפר, לשדרג, לחזק ולמגן בנייני מגורים ולשדרג שטחים ציבוריים ותשתיות. הפרויקטים כוללים לרוב הוספת דירות חדשות באזורי מגורים בנויים ותיקים, על ידי חיזוק ועיבוי על גבי מבנים קיימים או על ידי הריסת מבנים ישנים ובניית חדשים במקומם. פרויקטים מסוג זה מקודמים הן ביוזמה ממשלתית והן ביוזמה פרטית.
+
+פרויקט התחדשות עירונית מהווה הזדמנות עבור בעלי הדירות לחזק ולמגן את דירותיהם, להרחיב את דירותיהם, ובכך לשפר את איכות חייהם ולהשביח את נכסיהם.
+בפרויקט מסוג זה הדירה הקיימת מורחבת, או נהרסת, ובמקומה נבנית דירה חדשה. זאת בלי שעלויות השיפוץ והבנייה מוטלות על בעלי הדירות. היות שמדובר בהחלטה כבדת משקל, חשוב שבידי בעלי הדירות יהיה כל המידע הדרוש להם כדי לקדם פרויקט מוצלח מבחינתם.
+
+הפרויקטים יכולים להתממש רק אם קיימת הסכמה מצד בעלי הדירות הקיימות בבניינים הוותיקים, כיוון שהם בעלי הזכויות בקרקע..</p>
 	            	</div>
 	            	<p class="fh5co-property-specification">
 	            		<span><strong>3500</strong> Sq Ft</span>  <span><strong>3</strong> Beds</span>  <span><strong>3.5</strong> Baths</span>  <span><strong>2</strong> Garages</span>
